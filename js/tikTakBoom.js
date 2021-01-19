@@ -25,14 +25,13 @@ tikTakBoom = {
         this.rightAnswers = 0;
 
         this.turnOn();
+        setTimeout(this.timer, 2000);
 
-        this.timer();
-        
     },
 
     turnOn() {
-        this.shortTimer();
-        // this.gameStatusField.innerText = ` Вопрос игроку №${this.state}`;
+        this.beforeTimer();
+        this.gameStatusField.innerText += `Вопрос игроку №${this.state}`;
 
         const taskNumber = randomIntNumber(this.tasks.length - 1);
         this.printQuestion(this.tasks[taskNumber]);
@@ -118,11 +117,15 @@ tikTakBoom = {
         }
     },
     j:5,
-    shortTimer() {
-        this.gameStatusField.innerText=`Игроку ${this.state} приготовиться ${this.j}`;
-        this.j--;
-        console.log(this.j);
-        setInterval(this.shortTimer,1000)
-            
-    }
+    beforeTimer() {
+		var i = this.j;
+		this.timeClear = setInterval(() => {
+			this.gameStatusField.innerText = `Игроку ${this.state} приготовиться...${i}`;
+			i--;
+			if (i < 0) {
+                clearInterval(this.timeClear);
+                // this.gameStatusField.innerText = ``;
+			}
+		}, 1000);
+	}
 }

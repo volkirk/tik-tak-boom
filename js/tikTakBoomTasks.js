@@ -1,5 +1,4 @@
 const tasks = `
-
     [
         {
             "question": "2 * 2 = ",
@@ -35,6 +34,26 @@ const tasks = `
             "question": "Сколько ног у пауков?",
             "answer1": { "result": false, "value": "6" },
             "answer2": { "result": true, "value": "8" }
+        },
+        {
+            "question": "Как называется самец в пчелиной семье? ",
+            "answer1": { "result": false, "value": "Трутень" },
+            "answer2": { "result": true, "value": "Шмель" }
+        },
+        {
+            "question": "Как называется самое быстро летающее насекомое? ",
+            "answer1": { "result": false, "value": "Стрекоза" },
+            "answer2": { "result": true, "value": "Комар" }
+        },
+        {
+            "question": "У кого зубы в желудке?",
+            "answer1": { "result": false, "value": "Кит" },
+            "answer2": { "result": true, "value": "Краб" }
+        },
+        {
+            "question": " У кого уши на ногах?",
+            "answer1": { "result": false, "value": "Муха" },
+            "answer2": { "result": true, "value": "Кузнечик" }
         },
         {
             "question": "Столица Италии?",
