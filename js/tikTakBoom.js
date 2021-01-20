@@ -23,9 +23,9 @@ tikTakBoom = {
         this.btnStop = btnStop;
         this.needRightAnswers = 3;
     },
-    // start(){
-    //     this.btnStart.addEventListener('click', this.run());
-    // },
+    start(){
+        tikTakBoom.btnStart.addEventListener('click', tikTakBoom.run);
+    },
     run() {
         this.oldState=1;
         this.state = 1;
@@ -34,7 +34,6 @@ tikTakBoom = {
         this.beforeTimer();
         // setTimeout(() => this.turnOn(),5000);
         // setTimeout(() => this.timer(), 5000);
-
     },
 
     turnOn() {
@@ -71,16 +70,20 @@ tikTakBoom = {
             if (this.tasks.length === 0) {
                 this.finish('lose');
             } else {
-                this.turnOn();
+                // this.beforeTimer();      
+                if (this.oldState!=this.state) {
+                    this.mainTimerFlag=false;
+                    this.beforeTimer();
+                }
+                else {
+                    this.turnOn();
+                }      
             }
         } else {
             this.finish('won');
         }
 
-        if (this.oldState!=this.state) {
-            this.mainTimerFlag=false;
-            this.beforeTimer();
-        }
+        
 
         this.textFieldAnswer1.removeEventListener('click', answer1);
         this.textFieldAnswer2.removeEventListener('click', answer2);
@@ -134,7 +137,7 @@ tikTakBoom = {
             }
         }
     },
-    
+
     j:4,
 
     beforeTimer() {
