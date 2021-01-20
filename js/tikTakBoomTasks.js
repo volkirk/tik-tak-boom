@@ -37,13 +37,13 @@ const tasks = `
         },
         {
             "question": "Как называется самец в пчелиной семье? ",
-            "answer1": { "result": false, "value": "Трутень" },
-            "answer2": { "result": true, "value": "Шмель" }
+            "answer1": { "result": false, "value": "Шмель" },
+            "answer2": { "result": true, "value": "Трутень" }
         },
         {
             "question": "Как называется самое быстро летающее насекомое? ",
-            "answer1": { "result": false, "value": "Стрекоза" },
-            "answer2": { "result": true, "value": "Комар" }
+            "answer1": { "result": false, "value": "Комар" },
+            "answer2": { "result": true, "value": "Стрекоза" }
         },
         {
             "question": "У кого зубы в желудке?",
@@ -54,6 +54,31 @@ const tasks = `
             "question": " У кого уши на ногах?",
             "answer1": { "result": false, "value": "Муха" },
             "answer2": { "result": true, "value": "Кузнечик" }
+        },
+        {
+            "question": " Воздушная оболочка Земли называется",
+            "answer1": { "result": false, "value": "Литосфера" },
+            "answer2": { "result": true, "value": "Атмосфера" }
+        },
+        {
+            "question": "Какой остров самый большой в мире?",
+            "answer1": { "result": false, "value": "Бали" },
+            "answer2": { "result": true, "value": "Гренландия" }
+        },
+        {
+            "question": "Какой метод является устаревшим?",
+            "answer1": { "result": false, "value": "document.querySelector" },
+            "answer2": { "result": true, "value": "document.getElementById" }
+        },
+        {
+            "question": "Автор сказки о рыбаке и рыбке?",
+            "answer1": { "result": false, "value": "Толстой" },
+            "answer2": { "result": true, "value": "Пушкин" }
+        },
+        {
+            "question": "Самая длинная река?",
+            "answer1": { "result": false, "value": "Амазонка" },
+            "answer2": { "result": true, "value": "Нил" }
         },
         {
             "question": "Столица Италии?",

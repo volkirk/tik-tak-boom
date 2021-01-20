@@ -23,8 +23,12 @@ tikTakBoom = {
         this.btnStop = btnStop;
         this.needRightAnswers = 3;
     },
+    objstart(){
+        console.log(() => tikTakBoom.start()); //Хочется оставить все this на местах, и вызвать функцию по клику старта.
+        this.start();
+    },
     start(){
-        tikTakBoom.btnStart.addEventListener('click', tikTakBoom.run);
+        this.run();
     },
     run() {
         this.oldState=1;
