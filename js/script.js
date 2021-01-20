@@ -11,5 +11,5 @@ window.onload = function()
         document.getElementById('stop')
     )
     // tikTakBoom.start();
-    document.getElementById('start').addEventListener('click', tikTakBoom.objstart);
+    document.getElementById('start').addEventListener('click', tikTakBoom.objstart.bind(tikTakBoom));
 }
